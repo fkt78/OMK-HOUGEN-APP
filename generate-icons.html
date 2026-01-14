@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PWAアイコン生成</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        canvas {
+            border: 1px solid #ccc;
+            margin: 10px;
+            background: white;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>PWAアイコン生成ツール</h1>
+    <p>以下のボタンをクリックしてアイコンをダウンロードしてください。</p>
+    
+    <canvas id="icon192" width="192" height="192"></canvas>
+    <canvas id="icon512" width="512" height="512"></canvas>
+    
+    <div>
+        <button onclick="generateIcon(192)">192x192 アイコンをダウンロード</button>
+        <button onclick="generateIcon(512)">512x512 アイコンをダウンロード</button>
+    </div>
+
+    <script>
+        function generateIcon(size) {
+            const canvas = document.getElementById(`icon${size}`);
+            const ctx = canvas.getContext('2d');
+            
+            // 背景（黄色）
+            ctx.fillStyle = '#FFD93D';
+            ctx.fillRect(0, 0, size, size);
+            
+            // 外側の円（オレンジ）
+            ctx.fillStyle = '#FF8400';
+            ctx.strokeStyle = '#4F200D';
+            ctx.lineWidth = Math.max(2, size / 25);
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/2.5, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.stroke();
+            
+            // 内側の円（少し小さく）
+            ctx.fillStyle = '#FFD93D';
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size/3.5, 0, Math.PI * 2);
+            ctx.fill();
+            
+            // テキスト「方」
+            ctx.fillStyle = '#4F200D';
+            ctx.font = `bold ${size/2.5}px 'Zen Maru Gothic', Arial, sans-serif`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('方', size/2, size/2);
+            
+            // PNGとしてダウンロード
+            canvas.toBlob((blob) => {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `icon-${size}.png`;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                console.log(`✓ icon-${size}.png をダウンロードしました`);
+            }, 'image/png');
+        }
+        
+        // ページ読み込み時に両方のアイコンを描画
+        window.addEventListener('load', () => {
+            generateIcon(192);
+            setTimeout(() => generateIcon(512), 500);
+        });
+    </script>
+</body>
+</html>

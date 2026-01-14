@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本全国！方言励ましボタン</title>
+    <meta name="description" content="心が落ち込んでいる人に対して、地元の言葉で励ましてもらえるアプリ">
+    <meta name="theme-color" content="#FF8400">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="方言励まし">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">
+    <link rel="apple-touch-icon" href="/icon-192.png">
     <!-- Google Fonts: Zen Maru Gothic -->
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
     <style>
@@ -154,7 +163,6 @@
             font-weight: 700;
             opacity: 0.8;
         }
-<<<<<<< HEAD
 
         .category-selector {
             display: flex;
@@ -353,11 +361,6 @@
 <body>
     <div class="particles" id="particles"></div>
     <div class="combo-counter" id="comboCounter"></div>
-=======
-    </style>
-</head>
-<body>
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
 
     <div class="container">
         <div class="mode-selector">
@@ -372,7 +375,6 @@
         <div id="icon" class="header-icon">🥷</div>
         <h1 id="title">伊賀弁で励ますで！</h1>
         
-<<<<<<< HEAD
         <div class="category-selector" id="categorySelector">
             <button class="category-btn active" onclick="setCategory('all')">すべて</button>
             <button class="category-btn" onclick="setCategory('tired')">疲れた時</button>
@@ -381,15 +383,12 @@
             <button class="category-btn" onclick="setCategory('rest')">休みたい時</button>
         </div>
 
-=======
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
         <div class="display-area" id="bubble">
             <div id="message">やる気出えへん時、<br>押してみだーこ！</div>
         </div>
 
         <button class="btn-push" id="btnPush">励ましてな！</button>
         
-<<<<<<< HEAD
         <div class="action-buttons">
             <button class="btn-action" id="btnSpeak" onclick="speakMessage()" title="メッセージを読み上げ">
                 🔊 読み上げ
@@ -399,15 +398,12 @@
             </button>
         </div>
         
-=======
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
         <div class="footer" id="footerText">
             伊賀の忍者が応援しとるで！
         </div>
     </div>
 
     <script>
-<<<<<<< HEAD
         // メッセージをカテゴリー付きオブジェクトに変換するヘルパー関数
         function createMessages(messagesArray, categories) {
             return messagesArray.map((msg, index) => ({
@@ -420,12 +416,6 @@
             iga: {
                 title: "伊賀弁で励ますで！", icon: "🥷", color: "#FFD93D", footer: "伊賀の忍者が応援しとるで！",
                 messages: createMessages([
-=======
-        const dialectData = {
-            iga: {
-                title: "伊賀弁で励ますで！", icon: "🥷", color: "#FFD93D", footer: "伊賀の忍者が応援しとるで！",
-                messages: [
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
                     "さあ、ぼちぼちいこか！",
                     "あんたなら、きっとできるわ。やってみだーこ！",
                     "無理せんと、一回お茶でも飲みな。あせらんと！",
@@ -456,19 +446,11 @@
                     "大丈夫、なんとかなるさかい。気楽にいこ。",
                     "お疲れさん。ゆっくり休んで、また明日な。",
                     "あんたはうちの自慢や。自信持ってな！"
-<<<<<<< HEAD
                 ], ['motivation', 'motivation', 'rest', 'motivation', 'motivation', 'motivation', 'sad', 'sad', 'rest', 'motivation', 'tired', 'sad', 'motivation', 'rest', 'tired', 'sad', 'motivation', 'sad', 'sad', 'motivation', 'motivation', 'tired', 'sad', 'motivation', 'motivation', 'tired', 'motivation', 'sad', 'rest', 'motivation'])
             },
             okinawa: {
                 title: "沖縄弁でちばりよー！", icon: "🌺", color: "#FF8A8A", footer: "太陽（てぃだ）が照らしとるよ！",
                 messages: createMessages([
-=======
-                ]
-            },
-            okinawa: {
-                title: "沖縄弁でちばりよー！", icon: "🌺", color: "#FF8A8A", footer: "太陽（てぃだ）が照らしとるよ！",
-                messages: [
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
                     "なんくるないさー！焦らんでええよ。",
                     "ちばりよー！あんたなら出来るさぁ。",
                     "まくとぅそーけー、なんくるないさ。",
@@ -499,19 +481,11 @@
                     "あんた、上等（ジョートー）だよ！最高さ！",
                     "くくる（心）を大切に、一歩ずつ進もうね。",
                     "ハイサイ！元気な挨拶で、運気も上がるよ！"
-<<<<<<< HEAD
                 ], ['sad', 'motivation', 'sad', 'motivation', 'rest', 'tired', 'motivation', 'sad', 'rest', 'motivation', 'sad', 'sad', 'motivation', 'motivation', 'motivation', 'motivation', 'rest', 'sad', 'sad', 'motivation', 'sad', 'rest', 'motivation', 'rest', 'sad', 'motivation', 'motivation', 'motivation', 'motivation', 'motivation'])
             },
             tohoku: {
                 title: "東北弁でけっぱれ！", icon: "🌾", color: "#A2D2FF", footer: "あったけぇ心で応援してるぞ。",
                 messages: createMessages([
-=======
-                ]
-            },
-            tohoku: {
-                title: "東北弁でけっぱれ！", icon: "🌾", color: "#A2D2FF", footer: "あったけぇ心で応援してるぞ。",
-                messages: [
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
                     "けっぱれ！応援してるがらな。",
                     "んだんだ。ゆっくりでいいんだ。無理しねでけろ。",
                     "おだづなよって言われんくらい頑張るべ！",
@@ -542,19 +516,11 @@
                     "大丈夫だ、大丈夫だ。みんな見守ってるがら。",
                     "あんた、立派だ。本当によく頑張ったな。",
                     "冬は必ず春になる。信じて進むべ。"
-<<<<<<< HEAD
                 ], ['motivation', 'sad', 'motivation', 'rest', 'motivation', 'tired', 'sad', 'motivation', 'rest', 'sad', 'motivation', 'motivation', 'sad', 'rest', 'motivation', 'rest', 'motivation', 'motivation', 'sad', 'motivation', 'sad', 'sad', 'motivation', 'rest', 'motivation', 'motivation', 'sad', 'motivation', 'sad', 'motivation'])
             },
             kansai: {
                 title: "関西弁で応援や！", icon: "🐙", color: "#F48FB1", footer: "笑う門には福来るやで！",
                 messages: createMessages([
-=======
-                ]
-            },
-            kansai: {
-                title: "関西弁で応援や！", icon: "🐙", color: "#F48FB1", footer: "笑う門には福来るやで！",
-                messages: [
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
                     "ええやんか！自分信じていきや！",
                     "がんばりや！あんたの根性は本物やで。",
                     "しらんけど、絶対うまくいくわ！",
@@ -585,19 +551,11 @@
                     "ええ風吹かせてるやん！その調子や！",
                     "自分は自分の道、しゃきしゃき歩きや！",
                     "お疲れ！パーッと美味いもん食べにいこか！"
-<<<<<<< HEAD
                 ], ['motivation', 'motivation', 'motivation', 'rest', 'motivation', 'motivation', 'sad', 'motivation', 'motivation', 'motivation', 'sad', 'sad', 'motivation', 'rest', 'sad', 'motivation', 'sad', 'sad', 'motivation', 'motivation', 'motivation', 'motivation', 'sad', 'motivation', 'sad', 'motivation', 'sad', 'motivation', 'motivation', 'rest'])
             },
             hakata: {
                 title: "博多弁でよかよー！", icon: "🍜", color: "#FFCC80", footer: "おいしいもん食べにいこーや！",
                 messages: createMessages([
-=======
-                ]
-            },
-            hakata: {
-                title: "博多弁でよかよー！", icon: "🍜", color: "#FFCC80", footer: "おいしいもん食べにいこーや！",
-                messages: [
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
                     "がんばりーね！ずっと見守っとるよ。",
                     "よかよー、失敗したってよかよー！",
                     "あんた、ようやっとる。好いとーよ！",
@@ -628,19 +586,11 @@
                     "あんたならやれる、そう信じとるばい。",
                     "たまには弱音ば吐いてもよかとよ。受け止めるけん。",
                     "美味しいもん食べて、幸せな夢ば見てね。"
-<<<<<<< HEAD
                 ], ['motivation', 'sad', 'motivation', 'motivation', 'tired', 'motivation', 'sad', 'rest', 'sad', 'motivation', 'sad', 'motivation', 'rest', 'motivation', 'motivation', 'motivation', 'rest', 'motivation', 'motivation', 'motivation', 'sad', 'sad', 'motivation', 'motivation', 'motivation', 'sad', 'rest', 'motivation', 'sad', 'rest'])
             },
             tosa: {
                 title: "土佐弁でいくぜよ！", icon: "🐳", color: "#BCAAA4", footer: "太平洋のような心でいこう！",
                 messages: createMessages([
-=======
-                ]
-            },
-            tosa: {
-                title: "土佐弁でいくぜよ！", icon: "🐳", color: "#BCAAA4", footer: "太平洋のような心でいこう！",
-                messages: [
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
                     "頑張っちゅうねえ。まっこと感心するぜよ！",
                     "日本の夜明けは近いぜよ！前を向くがじゃ！",
                     "こじゃんと応援しちゅうきね。",
@@ -671,16 +621,11 @@
                     "あんたの勇気、日本の夜明けを連れてくるぜよ。",
                     "こじゃんと休んで、また明日から暴れるがじゃ！",
                     "最高の人生を、自分で切り開くがぜよ！"
-<<<<<<< HEAD
                 ], ['motivation', 'motivation', 'motivation', 'motivation', 'motivation', 'rest', 'motivation', 'sad', 'motivation', 'sad', 'motivation', 'motivation', 'motivation', 'motivation', 'motivation', 'motivation', 'motivation', 'motivation', 'rest', 'motivation', 'motivation', 'motivation', 'motivation', 'motivation', 'motivation', 'sad', 'motivation', 'motivation', 'rest', 'motivation'])
-=======
-                ]
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
             }
         };
 
         let currentMode = 'iga';
-<<<<<<< HEAD
         let currentCategory = 'all';
         let currentMessage = '';
         let messageEl, btnPush, titleEl, iconEl, footerEl, bubbleEl;
@@ -737,18 +682,6 @@
                 return;
             }
             
-=======
-        const messageEl = document.getElementById('message');
-        const btnPush = document.getElementById('btnPush');
-        const titleEl = document.getElementById('title');
-        const iconEl = document.getElementById('icon');
-        const footerEl = document.getElementById('footerText');
-        const bubbleEl = document.getElementById('bubble');
-
-        function setMode(mode) {
-            currentMode = mode;
-            const data = dialectData[mode];
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
             document.documentElement.style.setProperty('--current-theme-color', data.color);
             titleEl.innerText = data.title;
             iconEl.innerText = data.icon;
@@ -766,7 +699,6 @@
                 }
             });
 
-<<<<<<< HEAD
             if (messageEl) {
                 messageEl.classList.add('fade-out');
                 setTimeout(() => {
@@ -792,23 +724,11 @@
 
         function triggerBounce() {
             if (!iconEl) return;
-=======
-            messageEl.classList.add('fade-out');
-            setTimeout(() => {
-                messageEl.innerText = "モードを変えたで！\n心を込めて励ますさかい、\nボタンを押してみだーこ。";
-                messageEl.classList.remove('fade-out');
-            }, 200);
-            triggerBounce();
-        }
-
-        function triggerBounce() {
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
             iconEl.classList.remove('bounce');
             void iconEl.offsetWidth;
             iconEl.classList.add('bounce');
         }
 
-<<<<<<< HEAD
         function setCategory(category) {
             currentCategory = category;
             
@@ -1124,23 +1044,42 @@
                 counter.classList.remove('show');
             }
         }
-=======
-        function updateMessage() {
-            messageEl.classList.add('fade-out');
-            setTimeout(() => {
-                const list = dialectData[currentMode].messages;
-                let newMessage = list[Math.floor(Math.random() * list.length)];
-                if (newMessage === messageEl.innerText) {
-                    newMessage = list[(list.indexOf(newMessage) + 1) % list.length];
-                }
-                messageEl.innerText = newMessage;
-                messageEl.classList.remove('fade-out');
-                triggerBounce();
-            }, 200);
-        }
 
-        btnPush.addEventListener('click', updateMessage);
->>>>>>> b769a3fa270304d2956e05617451c473c8f69bff
+        // Service Workerの登録
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then((registration) => {
+                        console.log('Service Worker登録成功:', registration.scope);
+                        
+                        // 更新チェック
+                        registration.addEventListener('updatefound', () => {
+                            const newWorker = registration.installing;
+                            newWorker.addEventListener('statechange', () => {
+                                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                                    // 新しいバージョンが利用可能
+                                    if (confirm('新しいバージョンが利用可能です。更新しますか？')) {
+                                        newWorker.postMessage({ action: 'skipWaiting' });
+                                        window.location.reload();
+                                    }
+                                }
+                            });
+                        });
+                    })
+                    .catch((error) => {
+                        console.log('Service Worker登録失敗:', error);
+                    });
+            });
+
+            // ページがフォーカスされたときに更新をチェック
+            let refreshing = false;
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (!refreshing) {
+                    refreshing = true;
+                    window.location.reload();
+                }
+            });
+        }
     </script>
 </body>
 </html>
