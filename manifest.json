@@ -2,7 +2,7 @@
   "name": "日本全国！方言励ましボタン",
   "short_name": "方言励まし",
   "description": "心が落ち込んでいる人に対して、地元の言葉で励ましてもらえるアプリ",
-  "start_url": "/",
+  "start_url": "./",
   "display": "standalone",
   "background_color": "#FFD93D",
   "theme_color": "#FF8400",

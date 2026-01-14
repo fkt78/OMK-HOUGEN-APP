@@ -1,11 +1,11 @@
-const CACHE_NAME = 'hougen-app-v1.1';
+const CACHE_NAME = 'hougen-app-v1.2';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/OMK-HOUGEN-APP.JSX',
-  '/manifest.json',
-  '/icon-192.png',
-  '/icon-512.png',
+  './',
+  './index.html',
+  './OMK-HOUGEN-APP.JSX',
+  './manifest.json',
+  './icon-192.png',
+  './icon-512.png',
   'https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&display=swap'
 ];
 
@@ -65,7 +65,7 @@ self.addEventListener('fetch', (event) => {
           }
           // キャッシュにもない場合、オフラインページを返す
           if (event.request.destination === 'document') {
-            return caches.match('/index.html');
+            return caches.match('./index.html');
           }
         });
       })
