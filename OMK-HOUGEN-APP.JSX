@@ -6,6 +6,7 @@
     <title>日本全国！方言励ましボタン</title>
     <meta name="description" content="心が落ち込んでいる人に対して、地元の言葉で励ましてもらえるアプリ">
     <meta name="theme-color" content="#FF8400">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="方言励まし">

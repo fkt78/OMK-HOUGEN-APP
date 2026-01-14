@@ -45,14 +45,29 @@ self.addEventListener('activate', (event) => {
 
 // フェッチイベント: ネットワーク優先、フォールバックでキャッシュ
 self.addEventListener('fetch', (event) => {
+  // chrome-extensionやdata:などのスキームはキャッシュしない
+  const url = new URL(event.request.url);
+  if (url.protocol === 'chrome-extension:' || url.protocol === 'data:' || url.protocol === 'chrome:') {
+    return;
+  }
+
+  // HTTP/HTTPSリクエストのみ処理
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') {
+    return;
+  }
+
   event.respondWith(
     fetch(event.request)
       .then((response) => {
         // レスポンスが有効な場合、クローンしてキャッシュに保存
-        if (response && response.status === 200) {
+        if (response && response.status === 200 && response.type === 'basic') {
           const responseToCache = response.clone();
           caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
+            try {
+              cache.put(event.request, responseToCache);
+            } catch (error) {
+              console.log('キャッシュ保存エラー:', error);
+            }
           });
         }
         return response;
